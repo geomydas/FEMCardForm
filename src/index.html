@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="geomydas" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <style></style>
+    <script src="./script.js" defer ></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div aria-hidden="true">
+        <div>
+          <img src="../images/" alt="" />
+          <span data-js="decor-card-number">0000 0000 0000 0000</span>
+          <span data-js="decor-cardholder-name">Jane Appleseed</span>
+          <span>
+            <span data-js="decor-month"></span>
+            <span data-js="decor-year"></span>
+          </span>
+        </div>
+        <div>
+          <img src="../images/" alt="" />
+          <span data-js="decor-cvc">000</span>
+        </div>
+      </div>
+      <section>
+        <form action="" novalidate data-js="form" method="post">
+          <label for="cardholder-name">Cardholder Name</label
+          ><input
+            id="cardholder-name"
+            type="name"
+            name="cardholder-name"
+            data-js="cardholder-name"
+            required
+            aria-required="true"
+            aria-invalid="false"
+            autocomplete=""
+            placeholder="e.g. Jane Appleseed"
+          /><label for="card-number">Card Number</label
+          ><input
+            id="card-number"
+            type="password"
+            name="card-number"
+            data-js="card-number"
+            required
+            aria-required="true"
+            aria-invalid="false"
+            autocomplete=""
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <fieldset>
+            <legend>Exp. Date (MM/YY)</legend>
+            <label class="sr-only" for="month">Month</label
+            ><input
+              id="month"
+              type="text"
+              name="month"
+              data-js="month"
+              required
+              aria-required="true"
+              aria-invalid="false"
+              autocomplete=""
+              placeholder="MM"
+            /><label class="sr-only" for="year">Year</label
+            ><input
+              id="year"
+              type="text"
+              name="year"
+              data-js="year"
+              required
+              aria-required="true"
+              aria-invalid="falsee"
+              autocomplete=""
+              placeholder="YY"
+            />
+          </fieldset>
+          <label for="cvc">CVC</label
+          ><input
+            id="cvc"
+            type="text"
+            name="cvc"
+            data-js="cvc"
+            required
+            aria-required="true"
+            aria-invalid="false"
+            autocomplete=""
+            placeholder="e.g. 123"
+          /><button type="submit">Confirm</button>
+        </form>
+      </section>
+      <section>
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </section>
+    </main>
+  </body>
+</html>
