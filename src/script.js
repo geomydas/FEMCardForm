@@ -11,22 +11,19 @@ const decorYear = document.querySelector("[data-js='decor-year']");
 const decorCvc = document.querySelector("[data-js='decor-cvc']");
 const decors = [decorCardholderName, decorCardNumber, decorMonth, decorYear, decorCvc];
 
-inputCardholderName.addEventListener("input", function () {
-  decorCardholderName.textContent = inputCardholderName.value;
-});
+function mapValue(param1, param2) {
+  return (param2.textContent = param1.value);
+}
+const inputsAndDecors = [
+  { input: inputCardholderName, decor: decorCardholderName },
+  { input: inputCardNumber, decor: decorCardNumber },
+  { input: inputMonth, decor: decorMonth },
+  { input: inputYear, decor: decorYear },
+  { input: inputCvc, decor: decorCvc },
+];
 
-inputCardNumber.addEventListener("input", function () {
-  decorCardNumber.textContent = inputCardNumber.value;
-});
-
-inputMonth.addEventListener("input", function () {
-  decorMonth.textContent = inputMonth.value;
-});
-
-inputYear.addEventListener("input", function () {
-  decorYear.textContent = inputYear.value;
-});
-
-inputCvc.addEventListener("input", function () {
-  decorCvc.textContent = inputCvc.value;
+inputsAndDecors.forEach((element) => {
+  element.input.addEventListener("input", function () {
+    mapValue(element.input, element.decor)
+  })
 });
